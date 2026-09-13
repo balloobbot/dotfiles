@@ -36,16 +36,6 @@ If the folder doesn't have the dev environment set up, set it up. `uv` is always
 
 Use `gh` CLI to interact with GitHub. I'm @balloob and @balloobbot on GitHub.
 
-Don't force push when a PR is open, unless you're resolving merge conflicts by rebasing.
-
-When making a PR, use the PR template from the repository. DO NOT REMOVE ANYTHING from the template. If there is a choice of type of PR, do not remove the unchecked checkboxes.
-
-Keep the PR description succinct and to the point. Use a single paragraph if you can.
-
-After making a PR, subscribe to GitHub events for CI status. Don't set up time-based triggers to check in. If CI fails, fix it and push the fix.
-
-Read the comments on the PR. If a comment clearly reports a bug, fix it. For every other comment, ask me before you act. Never post a reply on the PR yourself.
-
 In Markdown rendered on GitHub (PR descriptions, comments, issues, etc.), a single newline is rendered as an actual line break. This is off-spec from standard Markdown. So do NOT hard-wrap text to a column width in GitHub Markdown; let paragraphs flow on a single line and only insert newlines where you genuinely want a line break.
 
 When asked to publish a HTML File: Upload it as a private GitHub Gist, then it's viewable at `https://gisthost.github.io/?<GIST_ID>`.
@@ -53,3 +43,15 @@ When asked to publish a HTML File: Upload it as a private GitHub Gist, then it's
 ```bash
 gh gist create architecture.html
 ```
+
+## Pull requests
+
+Use the PR template from the repository. DO NOT REMOVE ANYTHING from the template. If there is a choice of type of PR, do not remove the unchecked checkboxes.
+
+PR descriptions: at most 50 words in the summary section. Say what changed and why, nothing else. No file paths, no symbol names, no narration of the diff, no account of what you ran to verify it. Detail belongs in the commit message; the diff and the checks speak for themselves. Answer other template sections in one line each.
+
+Don't force push when a PR is open, unless you're resolving merge conflicts by rebasing.
+
+After making a PR, subscribe to GitHub events for CI status. Don't set up time-based triggers to check in. If CI fails, fix it and push the fix.
+
+Read the comments on the PR. If a comment clearly reports a bug, fix it. For every other comment, ask me before you act. Never post a reply on the PR yourself.

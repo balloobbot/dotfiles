@@ -39,7 +39,7 @@
 ## Commit & Pull Request Guidelines
 - Commit messages follow Conventional Commits (examples: `feat: add codex installer step`, `refactor: simplified new branch alias`).
 - Keep commits focused (one logical change per commit).
-- PRs should describe the change, list commands run (if any), and note any manual steps needed.
+- PRs should describe the change and why, and note any manual steps needed.
 
 ## Security & Configuration Tips
 - Never commit secrets, tokens, or private keys; `ssh/` is config-only.
