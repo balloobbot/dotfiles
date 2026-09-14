@@ -12,14 +12,17 @@ else
     echo -e "${GREEN}Homebrew already installed${NC}"
 fi
 
-# Install Homebrew packages from Brewfile. This is also what puts mise on disk;
-# install.sh links config/mise.toml and runs `mise install` once this returns.
+# Install Homebrew packages from Brewfile
 echo -e "\n${GREEN}Installing Homebrew packages from Brewfile...${NC}"
 brew bundle --file="$DOTFILES_DIR/Brewfile"
 
 # Apply macOS system preferences
 echo -e "\n${GREEN}Applying macOS system preferences...${NC}"
 "$DOTFILES_DIR/macos-defaults.sh"
+
+# mise. Standalone binary so `mise self-update` works. install.sh links
+# config/mise.toml and runs `mise install` once the platform installer returns.
+curl -fsSL https://mise.run | sh
 
 # Claude Code
 curl -fsSL https://claude.ai/install.sh | bash
