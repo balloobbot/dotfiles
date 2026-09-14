@@ -32,7 +32,7 @@ Do not describe the previous code, removed behavior, or the change itself.
 
 When you start work, always check out the main branch and `git pull`. If the repository is a fork, also make sure the fork is up to date with upstream.
 
-If the folder doesn't have the dev environment set up, set it up. `uv` is always available.
+If the folder doesn't have the dev environment set up, set it up. `uv` (Python packages) and mise (runtimes and other CLI tools) are always available.
 
 Use `gh` CLI to interact with GitHub. I'm @balloob and @balloobbot on GitHub.
 
