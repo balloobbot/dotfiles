@@ -50,6 +50,8 @@ Use the PR template from the repository. DO NOT REMOVE ANYTHING from the templat
 
 PR descriptions: at most 50 words in the summary section. Say what changed and why, nothing else. No file paths, no symbol names, no narration of the diff, no account of what you ran to verify it. Detail belongs in the commit message; the diff and the checks speak for themselves. Answer other template sections in one line each.
 
+If the session started from a log or stack trace, include it in the PR description. It is the evidence that motivated the change, not diff narration, so it does not count against the 50 words. Collapse it in a `<details>` block when it runs more than about 20 lines.
+
 Don't force push when a PR is open, unless you're resolving merge conflicts by rebasing.
 
 After making a PR, subscribe to GitHub events for CI status. Don't set up time-based triggers to check in. If CI fails, fix it and push the fix.
