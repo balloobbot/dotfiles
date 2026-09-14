@@ -4,7 +4,8 @@
 - `Brewfile` lists Homebrew packages, casks, and Mac App Store apps. macOS only.
 - `config/mise.toml` lists runtimes and CLI tools managed by mise. Cross-platform;
   symlinked to `~/.config/mise/config.toml`. Prefer this over `Brewfile`/apt for
-  anything that ships as a single binary.
+  anything that ships as a single binary. mise manages runtimes and CLI tools;
+  `uv` manages Python packages.
 - `install.sh` bootstraps a new machine (installs tools and creates symlinks).
 - `install-linux.sh` Linux-specific bootstrap actions. Called by `install.sh`
 - `install-macos.sh` MacOS-specific bootstrap actions. Called by `install.sh`
@@ -22,6 +23,7 @@
 - `brew update && brew upgrade` keeps Homebrew packages current.
 - `mise install` installs everything declared in `config/mise.toml`.
 - `mise upgrade` updates the mise-managed tools.
+- `mise self-update` updates mise itself (macOS installs it via mise.run, not Homebrew).
 - Edit `config/mise.toml` by hand. Do not run `mise use -g`; it writes through
   the symlink into this repo.
 

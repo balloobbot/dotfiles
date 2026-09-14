@@ -38,8 +38,7 @@ else
 fi
 
 # mise. Link the tracked tool manifest, then install everything it declares.
-# This runs after the platform installer, which is what puts mise on disk:
-# Homebrew on macOS, mise.run on Linux.
+# This runs after the platform installer, which puts mise on disk via mise.run.
 echo
 echo "** Installing mise-managed tools"
 mkdir -p ~/.config/mise
