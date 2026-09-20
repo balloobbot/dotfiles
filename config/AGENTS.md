@@ -44,6 +44,20 @@ When asked to publish a HTML File: Upload it as a private GitHub Gist, then it's
 gh gist create architecture.html
 ```
 
+## Website previews
+
+If artifacts or a built-in website preview are unavailable, use a Cloudflare Quick Tunnel to share a running local website. The dotfiles installer includes `cloudflared` through mise on Linux and macOS.
+
+Start the website on localhost and check that it responds. For static files, serve only the output directory: `python3 -m http.server 8000 --bind 127.0.0.1 --directory <site-directory>`. Then run:
+
+```bash
+cloudflared tunnel --url http://localhost:8000 --output json
+```
+
+Use the website's actual port. Read the `https://*.trycloudflare.com` URL from the JSON log messages, then verify that it serves the expected page before sharing it. Keep the server and tunnel running while the user tests. The URL stops working when either process stops.
+
+Quick Tunnels are public and need no Cloudflare account. Serve only content intended for public preview. Use them for temporary testing, not permanent hosting.
+
 ## Pull requests
 
 Use the PR template from the repository. DO NOT REMOVE ANYTHING from the template. If there is a choice of type of PR, do not remove the unchecked checkboxes.
