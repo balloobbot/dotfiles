@@ -74,7 +74,9 @@ Don't force push when a PR is open, unless you're resolving merge conflicts by r
 
 After creating or updating a PR, monitor CI and new review comments until the PR is merged or closed, or I ask you to stop. Set up monitoring without asking me. Never leave a PR of mine with a failed check.
 
-Subscribe to GitHub events for CI status and new review comments if your environment permits it. If it does not, schedule timed follow-ups to check for updates.
+In T3 Code, link each PR you create or update to the thread and start its native PR watch. End the turn so T3 can wake you on PR activity. Keep the watch active through passing checks and review. Ask me when you need a decision. Report when the PR merges or closes, or when the watch stops and needs attention.
+
+In other environments, use the native PR watch or subscribe to GitHub events for checks and reviews. Schedule timed follow-ups only when neither is available.
 
 If CI fails, fix it and push the fix.
 
